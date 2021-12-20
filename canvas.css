@@ -1,0 +1,57 @@
+body{
+    background: #1d9325;
+    background: -moz-radial-gradient(center, ellipse cover, #1d9325 0%, #17752d 57%, #013a01 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #1d9325 0%,#17752d 57%,#013a01 100%);
+    background: radial-gradient(ellipse at center, #1d9325 0%,#17752d 57%,#013a01 100%);
+    height:100vh;
+    margin:0;
+    font-size:1vw;
+    font-family:Josefin Sans,sans-serif;
+    overflow:hidden;
+    cursor:default;
+}
+#deckOfcards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 80px;
+    height: 100px;
+    border: 1px solid;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    border: none;
+}
+.card::before{
+    content: attr(data-attr);
+    color: #000;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: currentcolor;
+}
+.card::after{
+    content: attr(data-attr);
+    color: #000;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: currentcolor;
+}
+.canvas{
+    border: 2px solid;
+    margin: auto;
+    margin-top: 40px;
+    width: 100%;
+}
+.container{
+    width: 60%;
+    margin: auto;
+
+}

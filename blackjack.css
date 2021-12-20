@@ -1,0 +1,90 @@
+body{
+    background: #1d9325;
+    background: -moz-radial-gradient(center, ellipse cover, #1d9325 0%, #17752d 57%, #013a01 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #1d9325 0%,#17752d 57%,#013a01 100%);
+    background: radial-gradient(ellipse at center, #1d9325 0%,#17752d 57%,#013a01 100%);
+    height:100vh;
+    margin:0;
+    font-size:1vw;
+    font-family:Josefin Sans,sans-serif;
+    overflow:hidden;
+    cursor:default;
+}
+#deckOfcards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 80px;
+    height: 110px;
+    margin: 10px;
+    border-radius: 5px;
+    position: relative;
+    border: none;
+    background-size: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+}
+.card::before{
+    content: attr(data-attr);
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    font-size: 10px;
+    color: currentcolor;
+}
+.card::after{
+    content: attr(data-attr);
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+    font-size: 10px;
+    color: currentcolor;
+    transform: rotate(
+180deg);
+}
+.card_item{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.back_img{
+    background-image:url('./image/back.png') ;
+}
+#start{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+#hit{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+}
+#board{
+    position: relative;
+}
+#players{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.player_board{
+    position: relative;
+    border: 1px solid;
+    min-width: 200px;
+    min-height: 110px;
+    background:#ffffff55 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.player_board::before{
+    content: attr(data-name);
+}
+.player_board .card_item{
+    position: relative;
+}
